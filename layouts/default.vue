@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <Switcher />
   <div class="page">
     <Header />

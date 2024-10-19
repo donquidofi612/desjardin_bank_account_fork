@@ -34,6 +34,7 @@ export default defineNuxtConfig({
     '@/assets/css/icons.css',
     '@/assets/css/bootstrap.css',
     '@/assets/css/styles.css',
+    'boxicons/css/boxicons.min.css'
   ],
   buildModules: [
     'nuxt-vite'
