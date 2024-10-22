@@ -233,7 +233,7 @@ const recentActivities = ref(bankData.recentActivities);
 <style scoped>
 /* Style pour la carte rouge personnalisée */
 .progress-card {
-  background-color: #e8041d; /* Couleur rouge */
+  background-color: #becf42; /* Couleur rouge */
   border-radius: 10px;
   color: #fff;
   padding: 15px;

@@ -12,7 +12,7 @@ const getImagePath = (imageName: any) => {
   return `${publicPath}${imageName}`;
 }
 useHead({
-  title: 'Societe General',
+  title: 'Mona Banq',
   // link: [{ rel: 'icon', type: 'image/png', href: getImagePath('images/brand-logos/favicon.ico') }]
 })
 </script>
@@ -22,7 +22,7 @@ useHead({
 }
 
 :root {
-  --primary-rgb: 232, 4, 29; /* Définit la couleur primaire en rouge */
+  --primary-rgb: 190, 207, 66; /* Définit la couleur primaire en rouge */
 }
 </style>
 

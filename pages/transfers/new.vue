@@ -189,16 +189,30 @@ export default {
 
       if (result.isConfirmed) {
         try {
-          // Appeler l'API pour envoyer le mail et enregistrer les infos
+          // Enregistrer d'abord localement
+          saveTransferToLocalStorage(transfer.value);
+
+          // Appeler l'API pour envoyer le mail et enregistrer à distance
           await sendEmailAndSaveTransfer(transfer.value);
 
           Swal.fire('Virement confirmé !', 'Votre virement a bien été enregistré et un email a été envoyé.', 'success');
           resetForm();
-          getTransfers();  // Mise à jour de la liste après enregistrement
+          getTransfersFromLocalStorage();  // Mise à jour de la liste après enregistrement
         } catch (error) {
           Swal.fire('Erreur', 'Une erreur est survenue lors de l\'enregistrement.', 'error');
         }
       }
+    };
+
+    const saveTransferToLocalStorage = (transferData: any) => {
+      const transfers = JSON.parse(localStorage.getItem('transfers') || '[]');
+      transfers.push(transferData);
+      localStorage.setItem('transfers', JSON.stringify(transfers));
+    };
+
+    const getTransfersFromLocalStorage = () => {
+      const transfers = JSON.parse(localStorage.getItem('transfers') || '[]');
+      transferList.value = transfers;
     };
 
     const sendEmailAndSaveTransfer = async (transferData: any) => {
@@ -242,19 +256,9 @@ export default {
       showSummary.value = false;
     };
 
-    // Fonction pour récupérer la liste des virements
-    const getTransfers = async () => {
-      try {
-        const response = await fetch('/api/getTransfers');
-        transferList.value = await response.json();
-      } catch (error) {
-        console.error('Erreur lors de la récupération des virements', error);
-      }
-    };
-
     // Charger la liste des virements au démarrage de la page
     onMounted(() => {
-      getTransfers();
+      getTransfersFromLocalStorage();
     });
 
     const dataToPass = {
