@@ -15,9 +15,8 @@ const getImagePath = (imageName: any) => {
 
 onMounted(async () => {
 
-  Swal.fire('Erreur', "Votre compte est temporairement bloqué. Le montant de 60 000 € est en attente de déblocage.\n" +
-      "\n" +
-      "Merci de contacter votre conseiller pour finaliser cette opération", 'error');
+
+
 });
 
 useHead({
