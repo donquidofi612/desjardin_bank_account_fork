@@ -11,6 +11,7 @@ definePageMeta({
   middleware: [auth],
 });
 
+
 // Données importées depuis bankData.js
 const accountBalance = ref(bankData.accountBalance);
 const fullname = ref(bankData.fullname);
@@ -233,7 +234,7 @@ const recentActivities = ref(bankData.recentActivities);
 <style scoped>
 /* Style pour la carte rouge personnalisée */
 .progress-card {
-  background-color: #becf42; /* Couleur rouge */
+  background-color: #2f95ce; /* Couleur rouge */
   border-radius: 10px;
   color: #fff;
   padding: 15px;

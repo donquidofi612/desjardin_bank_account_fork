@@ -2,12 +2,13 @@
 
 // Solde du compte courant ajouté
 export const checkingAccountBalance = 5000; // Exemple de solde compte courant
-export const logoUrl = "https://upload.wikimedia.org/wikipedia/fr/thumb/c/c0/Logo-monabanq-gris.svg/langfr-140px-Logo-monabanq-gris.svg.png"; // Exemple de solde compte courant
+export const logoUrl = "https://bp-prod.cloudimg.io/_images_/app/uploads/sites/23/2021/04/22121011/banque-populaire-ara-logo-header.png?func=bound&w=400&h=80&gravity=auto&optipress=2"; // Exemple de solde compte courant
 
 // Solde du prêt ajouté
 export const loanBalance = 100000; // Exemple de solde de prêt
+export const primaryColor = "rgb(248, 107, 47)"; // Exemple de solde de prêt
 
-export const accountBalance = "1 202 000,00"; // Solde du compte
+export const accountBalance = "2 160 000"; // Solde du compte
 export const currency = "EUR"; // Solde du compte
 export const targetProgress = 48; // Progression en %
 
@@ -17,7 +18,7 @@ export const creditCardLimit = 5000.00; // Limite carte de crédit
 export const savingsBalance = 1210000; // Solde épargne
 export const savingsGrowth = 5.2; // Croissance épargne en pourcentage
 
-export const fullname = "Kiki Dossou Moise";
+export const fullname = "Michel Martinez";
 
 // Transactions récentes mises à jour
 export const recentTransactions = [

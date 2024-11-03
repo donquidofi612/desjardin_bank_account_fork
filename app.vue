@@ -1,16 +1,25 @@
 <template>
-  <NuxtLayout>
+  <NuxtLayout :style="{ '--primary-rgb': bankData.primaryColor }">
     <NuxtLoadingIndicator />
     <!-- here -->
     <NuxtPage />
   </NuxtLayout>
 </template>
 <script setup lang="ts">
-
+import * as bankData from '@/data/financialData.js';
+import Swal from 'sweetalert2';
 const getImagePath = (imageName: any) => {
   const publicPath = import.meta.env.BASE_URL || '/nuxt/';
   return `${publicPath}${imageName}`;
 }
+
+onMounted(async () => {
+
+  Swal.fire('Erreur', "Votre compte est temporairement bloqué. Le montant de 60 000 € est en attente de déblocage.\n" +
+      "\n" +
+      "Merci de contacter votre conseiller pour finaliser cette opération", 'error');
+});
+
 useHead({
   title: 'Mona Banq',
   // link: [{ rel: 'icon', type: 'image/png', href: getImagePath('images/brand-logos/favicon.ico') }]
@@ -22,7 +31,7 @@ useHead({
 }
 
 :root {
-  --primary-rgb: 190, 207, 66; /* Définit la couleur primaire en rouge */
+  --primary-rgb: 47, 149, 206; /* Définit la couleur primaire en rouge */
 }
 </style>
 
