@@ -21,7 +21,7 @@ onMounted(async () => {
 });
 
 useHead({
-  title: 'Mona Banq',
+  title: 'Banque Populaire',
   // link: [{ rel: 'icon', type: 'image/png', href: getImagePath('images/brand-logos/favicon.ico') }]
 })
 </script>
