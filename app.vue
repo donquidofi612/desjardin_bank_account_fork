@@ -20,7 +20,7 @@ onMounted(async () => {
 });
 
 useHead({
-  title: 'Banque Populaire',
+  title: 'BNP',
   // link: [{ rel: 'icon', type: 'image/png', href: getImagePath('images/brand-logos/favicon.ico') }]
 })
 </script>
@@ -30,7 +30,7 @@ useHead({
 }
 
 :root {
-  --primary-rgb: 246, 116, 84; /* Définit la couleur primaire en rouge */
+  --primary-rgb: 0, 136, 84; /* Définit la couleur primaire en rouge */
 }
 </style>
 

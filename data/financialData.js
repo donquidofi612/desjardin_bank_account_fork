@@ -2,7 +2,7 @@
 
 // Solde du compte courant ajouté
 export const checkingAccountBalance = 5000; // Exemple de solde compte courant
-export const logoUrl = "https://www.attijariwafabank.com/themes/awbcorporate/logo.png"; // Exemple de solde compte courant
+export const logoUrl = "https://mabanque.bnpparibas/content/dam/mabanque/generique/bnp-alone.png"; // Exemple de solde compte courant
 
 // Solde du prêt ajouté
 export const loanBalance = 100000; // Exemple de solde de prêt
@@ -18,7 +18,7 @@ export const creditCardLimit = 5000.00; // Limite carte de crédit
 export const savingsBalance = 1210000; // Solde épargne
 export const savingsGrowth = 5.2; // Croissance épargne en pourcentage
 
-export const fullname = "Reevers Reevers";
+export const fullname = "Franz Werner";
 
 // Transactions récentes mises à jour
 export const recentTransactions = [
