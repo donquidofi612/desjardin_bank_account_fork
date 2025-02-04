@@ -8,7 +8,7 @@ export const logoUrl = "https://mabanque.bnpparibas/content/dam/mabanque/generiq
 export const loanBalance = 100000; // Exemple de solde de prêt
 export const primaryColor = "rgb(248, 107, 47)"; // Exemple de solde de prêt
 
-export const accountBalance = "3 000 000"; // Solde du compte
+export const accountBalance = "1375000,00"; // Solde du compte
 export const currency = "EUR"; // Solde du compte
 export const targetProgress = 48; // Progression en %
 
