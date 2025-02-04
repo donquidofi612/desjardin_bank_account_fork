@@ -18,7 +18,7 @@ export const creditCardLimit = 5000.00; // Limite carte de crédit
 export const savingsBalance = 1210000; // Solde épargne
 export const savingsGrowth = 5.2; // Croissance épargne en pourcentage
 
-export const fullname = "Franz Werner";
+export const fullname = "Caroline Honnet";
 
 // Transactions récentes mises à jour
 export const recentTransactions = [
