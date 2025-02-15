@@ -2,13 +2,13 @@
 
 // Solde du compte courant ajouté
 export const checkingAccountBalance = 5000; // Exemple de solde compte courant
-export const logoUrl = "https://mabanque.bnpparibas/content/dam/mabanque/generique/bnp-alone.png"; // Exemple de solde compte courant
+export const logoUrl = "https://www.desjardins.com/content/dam/images/logos/commun/logo-desjardins-fr.svg"; // Exemple de solde compte courant
 
 // Solde du prêt ajouté
 export const loanBalance = 100000; // Exemple de solde de prêt
-export const primaryColor = "rgb(248, 107, 47)"; // Exemple de solde de prêt
+export const primaryColor = "rgb(0, 136, 78)"; // Exemple de solde de prêt
 
-export const accountBalance = "1375000,00"; // Solde du compte
+export const accountBalance = "31.148.000"; // Solde du compte
 export const currency = "EUR"; // Solde du compte
 export const targetProgress = 48; // Progression en %
 
@@ -18,7 +18,7 @@ export const creditCardLimit = 5000.00; // Limite carte de crédit
 export const savingsBalance = 1210000; // Solde épargne
 export const savingsGrowth = 5.2; // Croissance épargne en pourcentage
 
-export const fullname = "Caroline Honnet";
+export const fullname = "Frederick  Plante";
 
 // Transactions récentes mises à jour
 export const recentTransactions = [
