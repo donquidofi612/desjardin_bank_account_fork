@@ -20,7 +20,7 @@ onMounted(async () => {
 });
 
 useHead({
-  title: 'BNP',
+  title: 'Desjardin CA',
   // link: [{ rel: 'icon', type: 'image/png', href: getImagePath('images/brand-logos/favicon.ico') }]
 })
 </script>
@@ -30,7 +30,7 @@ useHead({
 }
 
 :root {
-  --primary-rgb: 0, 136, 84; /* Définit la couleur primaire en rouge */
+  --primary-rgb: 0, 136, 78; /* Définit la couleur primaire en rouge */
 }
 </style>
 
