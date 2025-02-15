@@ -2,7 +2,7 @@
 
 // Solde du compte courant ajouté
 export const checkingAccountBalance = 5000; // Exemple de solde compte courant
-export const logoUrl = "https://www.desjardins.com/content/dam/images/logos/commun/logo-desjardins-fr.svg"; // Exemple de solde compte courant
+export const logoUrl = "https://www.mavn.ca/wp-content/uploads/2019/08/Desjardins-Logo-1170x357.png"; // Exemple de solde compte courant
 
 // Solde du prêt ajouté
 export const loanBalance = 100000; // Exemple de solde de prêt
