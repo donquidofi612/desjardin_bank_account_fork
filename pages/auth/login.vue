@@ -78,7 +78,7 @@ export default {
       <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-8 col-sm-10 col-12">
         <div class="my-5 d-flex justify-content-center">
           <NuxtLink style="display: flex; justify-content: center" to='/'>
-            <img :src="logoUrl" alt="logo" class="desktop-logo">
+            <img :src="logoUrl" style="width: 50%" alt="logo" class="desktop-logo">
 <!--            <img src="https://mabanque.bnpparibas/content/dam/mabanque/generique/bnp-alone.png" alt="logo" class="desktop-dark">-->
           </NuxtLink>
         </div>
